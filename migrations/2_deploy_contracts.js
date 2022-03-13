@@ -7,5 +7,6 @@ module.exports = function(deployer, network, accounts) {
   // deploy simple storage contract
   deployer.deploy(SimpleStorage);
   // Deploy main multisig contract
-  deployer.deploy(MultiSig, owners, 2)
+  deployer.deploy(MultiSig, owners, 4)
+
 };
