@@ -12,13 +12,14 @@ contract MultiSigWallet {
 
   event Deposit(address indexed sender, uint value);
 
+  
   function()
-    external
-    payable
+    	external
+      payable
   {
-    if (msg.value > 0) {
-      emit Deposit(msg.sender, msg.value);
-    }
+        if (msg.value > 0) {
+            emit Deposit(msg.sender, msg.value);
+	      }
   }
 
   constructor(address[] memory _owners, uint _required) public {}
